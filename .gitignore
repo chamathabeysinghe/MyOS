@@ -1,0 +1,7 @@
+*.o
+*.bin
+*.iso
+*.kate-swp
+.Makefile.kate-swp
+mykernel.iso
+
