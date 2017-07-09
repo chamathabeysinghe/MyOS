@@ -6,17 +6,17 @@
     public:
         class SegmentDescriptor{
         private:
-            unit16_t limit_lo;
-            unit16_t base_lo;
-            unit8_t base_hi;
-            unit8_t type;
-            unit8_t flasgs_limit_hi;
-            unit8_t base_vhi;
+            uint16_t limit_lo;
+            uint16_t base_lo;
+            uint8_t base_hi;
+            uint8_t type_dd;
+            uint8_t flasgs_limit_hi;
+            uint8_t base_vhi;
             
         public:
-            SegmentDescriptor(unit32_t base,unit32_t limit,unit8_t type);
-            unit32_t Base();
-            unit32_t Limit();
+            SegmentDescriptor(uint32_t base,uint32_t limit,uint8_t type);
+            uint32_t Base();
+            uint32_t Limit();
             
         }__attribute__((packed));
         
@@ -28,8 +28,8 @@
         GlobalDescriptorTable();
         ~GlobalDescriptorTable();
         
-        unit16_t codeSegmentSelector();
-        unit16_t dataSegmentSelector();
+        uint16_t codeSegmentSelector();
+        uint16_t dataSegmentSelector();
         
     };
 #endif

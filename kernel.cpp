@@ -1,5 +1,5 @@
 #include "types.h"
-
+#include "gdt.h"
 void printf(char* str)
 {
     static unsigned short* VideoMemory=(unsigned short*)0xb8000;
@@ -24,5 +24,6 @@ extern "C" void callConstructors()
 extern "C" void kernelMain(void* multiboot_structure, uint32_t magicnumber)
 { 
     printf("Hello World");
+    GlobalDescriptortable gdt;
     while(1);
 }
